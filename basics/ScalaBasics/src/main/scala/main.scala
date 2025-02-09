@@ -87,8 +87,32 @@ object main extends App {
 //  println(isPrime(10))
 
 
-  for(i <- 1 to 5){
-    println(i)
+//  for(i <- 1 to 5){
+//    println(i)
+//  }
+
+//  val n: Int = 5
+//
+//
+//  for(i <- 0 until n){
+//    for (j <- 0 until (i+1)){
+//      print("*")
+//    }
+//    println()
+//  }
+
+
+  //printing pattern
+  val n = 3
+  for(i <- 0 until n){
+    print(" " * (n-i-1))
+    println("*"*(i + 1))
   }
+  for (i <- (n - 2) to 0 by -1) {
+    print(" " * (n - i - 1))
+    println("*" * (i + 1))
+  }
+
+
 
 }
