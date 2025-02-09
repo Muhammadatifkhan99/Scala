@@ -13,5 +13,82 @@
 
 
 object main extends App {
-  println("Hello World");
+
+
+  val aCondition = true
+
+  val aConditionValue = if(aCondition) 5 else 3
+  println(aConditionValue);
+
+
+  //loops in scala
+  var i = 0
+  while(i<=10){
+    println(i)
+    i += 1
+  }
+  // a while returns a unit which is a side effect
+
+  def aFunction(x:String, y:Int): String = {
+    x + " " + y
+  }
+  //equivalent of this function is the followed one with out the return type of the function
+  def anotherFunc(x: String, y: Int) = {
+    x + " " + y
+  }
+
+
+  println(aFunction("hello",3))
+
+  def aParameterlessFunction(): Int = 42
+
+  println(aParameterlessFunction())
+
+  //RECURSION
+
+  def aRepeatedFunction(aString:String,n: Int): String = {
+    if (n == 1) aString
+    else aString + aRepeatedFunction(aString,n-1)
+  }
+
+  println(aRepeatedFunction("Atif",3))
+
+
+  //Functions TASKs
+
+//  def greeting(name:String, age:Int): String = {
+//    s"Hi my name is $name and I am $age years old"
+//  }
+//
+//  println(greeting("Ali",12))
+
+  //factorial function
+//  def factorial(n:Int): Int ={
+//  if(n <= 1) 1
+//  else n * factorial(n-1)
+//  }
+//  println(factorial(4))
+
+//  def fibonacciNum(n:Int): Int = {
+//    if (n == 1) 1
+//    else if (n == 2) 1
+//    else fibonacciNum(n-1) +fibonacciNum(n - 2)
+//  }
+//
+//  println(fibonacciNum(3))
+
+  //testing if a number is prime or not
+
+//  def isPrime(n:Int): String = {
+//    if(n / 1 == 0 && n / n == 0) s"$n is Prime"
+//    else s"$n is not Prime"
+//  }
+//
+//  println(isPrime(10))
+
+
+  for(i <- 1 to 5){
+    println(i)
+  }
+
 }
