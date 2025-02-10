@@ -18,4 +18,12 @@ object CBVandCBN extends App {
 
   callbyValue(System.nanoTime())
   callbyName(System.nanoTime())
+
+  def infinite (): Int = 1 + infinite()
+  def printFirst(x:Int, y: => Int) = println(x)
+
+//  printFirst(infinite(),34) this will crush the programm because the first value is used and cannot be figuredout and the system runs out of stack
+
+  printFirst(34,infinite()) //the second value is not used and hence no execution or evaluation is performed on that...
+
 }
