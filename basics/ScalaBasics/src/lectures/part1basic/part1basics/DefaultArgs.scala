@@ -1,3 +1,5 @@
+package part1basics
+
 object DefaultArgs extends App {
 
   def reFact(n: Int, acc: Int=1): Int = {

@@ -1,3 +1,5 @@
+package part1basics
+
 object FunctionalProgramming extends App {
 //  object means
 //

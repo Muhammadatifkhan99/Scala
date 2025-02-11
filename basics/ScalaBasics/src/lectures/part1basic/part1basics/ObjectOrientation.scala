@@ -1,3 +1,5 @@
+package part1basics
+
 object ObjectOrientation extends App {
 
   class Animal {

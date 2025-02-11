@@ -1,3 +1,5 @@
+package part1basics
+
 object CBVandCBN extends App {
 
 

@@ -1,3 +1,5 @@
+package part2oop
+
 object OOP extends App {
 
   val person = new Person("Ahmad",26);

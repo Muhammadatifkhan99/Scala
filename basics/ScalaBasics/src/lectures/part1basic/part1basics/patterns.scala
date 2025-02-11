@@ -1,3 +1,5 @@
+package part1basics
+
 object patterns extends App {
 //  println("hello World")
 

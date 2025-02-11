@@ -1,3 +1,5 @@
+package part1basics
+
 object Basics extends App {
   //extending the App means to make this file executable/ rannable
   val num: Int = 30
