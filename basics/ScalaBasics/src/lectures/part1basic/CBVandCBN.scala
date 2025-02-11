@@ -5,6 +5,8 @@ object CBVandCBN extends App {
   /// call by value
   //arguments are evaluated before calling a functions and they will be used throughtout the function, not re-evaluated on each call or usage
   def callbyValue(x: Long): Unit = {
+    //Unit is same just like returning void in C++, etc
+    //The value of Unit in Scala is empty parens ()
     println("call by value: " + x)
     println("call by value: " + x)
   }
