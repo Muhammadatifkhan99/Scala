@@ -1,6 +1,6 @@
 package part2oop
 
-object InheritanceAndTraits extends App {
+object Inheritance extends App {
 
 
   class Animal {
