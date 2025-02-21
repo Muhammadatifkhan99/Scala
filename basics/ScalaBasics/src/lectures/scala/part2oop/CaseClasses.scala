@@ -3,7 +3,7 @@ package part2oop
 object CaseClasses extends App  {
 
   case class Person (name:String, age: Int)
-  //1. parameters are by default converted into fileds
+  //1. parameters are by default converted into fields
   val khan = new Person("Khan",34)
   println(khan.name)
 
