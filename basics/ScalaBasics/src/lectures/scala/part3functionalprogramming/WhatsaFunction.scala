@@ -27,6 +27,26 @@ object WhatsaFunction extends App {
   //Function types Function2[A,B,R] === (A,B) => R
   println(adder1(1,3))
 
+  //Write a function that takes in two strings and cancatenate them
+
+  val strAdder: ((String,String) => String) = new Function2[String,String,String]{
+    override def apply(v1: String, v2: String): String = v1 + " " + v2
+  }
+  println(strAdder("Hello","World"))
+
+  //write a function that takes an Int and another function
+  val takeInt = new Function1[Int, Function1[Int,Int]] {
+    override def apply(v1: Int): Function1[Int,Int] = new Function1[Int,Int] {
+      override def apply(v2: Int): Int = v1 + v2
+    }
+  }
+  //higher order function
+  println(takeInt(1)(1))
+  println(takeInt(1)(2))
+  println(takeInt(1)(3))
+  println(takeInt(1)(4))
+  println(takeInt(1)(5))
+  println(takeInt(1)(6))
 }
 trait MyFunction[A,B] {
   def apply(element: A): B
