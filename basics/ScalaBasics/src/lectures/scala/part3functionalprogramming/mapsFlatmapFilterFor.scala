@@ -5,7 +5,7 @@ object mapsFlatmapFilterFor extends App {
   println(list)
 
   //map is a higher order function, that applies a given function to each element is a collection (list here).Returns a new collection
-  val doubled = list.map(x => x * 2)
+  val doubled = list.map(x => x * 2) // map takes
   println(s"Doubled List $doubled")
   val half = doubled.map(x => x / 2)
   println(s"Half List $half")
@@ -48,6 +48,35 @@ object mapsFlatmapFilterFor extends App {
   ///using flatMap
   val flatMapped = nums.flatMap(x => List(x,x*2))
   println(flatMapped) //output:::List(1, 2, 2, 4, 3, 6) returned a single list
+
+  //print all the combination between two lists
+  val numbus = List(1,2,3,4)
+  val char = List('a','b','c','d')
+  val color = List("black","white")
+  //List("a1","a2",...."d4")
+
+
+  //handling iterations in functional programming
+  val combinations = numbus.flatMap(n => char.flatMap(c => color.map(color => "" + c + n + "-" + color)))
+  println(combinations)
+
+  //foreach
+  val list1 = List(1,2,3,4,5,6,7,8,9)
+  list1.foreach(println)  //print output on a separate line
+
+  //for comprehensions
+  val forCombination = for {
+    //filters can also be applied inside the for comprehensions
+    //apply an if guard to this
+    n <- numbus if n % 2 == 0
+    c <- char
+    col <- color
+  } yield "" + c + n + "-" + col
+
+  println(forCombination)
+  for {
+    n <- numbus
+  } println(n) ///equivalent of the forEach
 
 
 
