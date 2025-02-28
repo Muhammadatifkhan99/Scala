@@ -26,7 +26,22 @@ object Sequences extends App {
 
   println(aList.mkString("-"))
 
-
   //Arrays
+  val numbers = Array(1,2,3,4,5,6,7,8,9)
+  println(numbers)
+  numbers.foreach(println)
+
+  val threeElements = Array.ofDim[Int](3)
+  println(threeElements)
+  threeElements.foreach(println)
+
+
+  //converting an array into a sequence can be done using an implicit coversion
+  val numbersSeq: Seq[Int] = numbers // implicit conversion
+  println(numbersSeq)
+
+  //vectors
+  val vector: Vector[Int] = Vector(1,2,3)
+  println(vector)
 
 }
