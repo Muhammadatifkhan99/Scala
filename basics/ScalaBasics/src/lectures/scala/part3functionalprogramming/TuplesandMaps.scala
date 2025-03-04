@@ -13,7 +13,7 @@ object TuplesandMaps extends App {
   //key is used to Index a Value, while Value is the actual data
   val aMap: Map[String, Int] = Map()
   //            Key,    Value
-  val phoneBook = Map(("Jim",456), "Atif" -> 789).withDefaultValue(-1)
+  val phoneBook = Map(("Jim",456), "Atif" -> 789,"JIM" -> 9000).withDefaultValue(-1)
   // a->b is sugar for (a,b)
   println(phoneBook)
 
